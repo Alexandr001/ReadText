@@ -14,7 +14,6 @@ Convertation convertation = new();
 
 MethodInfo? print = typeof(Convertation).GetMethod("DictionaryConvert",
                                                    BindingFlags.Instance |
-                                                   BindingFlags.Public |
                                                    BindingFlags.NonPublic);
 
 if (print?.Invoke(convertation, new object?[] {readText}) is Dictionary<string, int> dictionary) {
