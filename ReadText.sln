@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadText", "ReadText\ReadText.csproj", "{96C36916-7CB3-40F3-A8D6-E3D81F4AE7B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadTextLibrary", "ReadTextLibrary\ReadTextLibrary.csproj", "{A25D5D33-3BB3-42D2-8EF3-F689D623BECF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{96C36916-7CB3-40F3-A8D6-E3D81F4AE7B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96C36916-7CB3-40F3-A8D6-E3D81F4AE7B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96C36916-7CB3-40F3-A8D6-E3D81F4AE7B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A25D5D33-3BB3-42D2-8EF3-F689D623BECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A25D5D33-3BB3-42D2-8EF3-F689D623BECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A25D5D33-3BB3-42D2-8EF3-F689D623BECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A25D5D33-3BB3-42D2-8EF3-F689D623BECF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

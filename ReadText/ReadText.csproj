@@ -12,4 +12,8 @@
       <None Include="bin\Release\net6.0\Text.txt" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\ReadTextLibrary\ReadTextLibrary.csproj" />
+    </ItemGroup>
+
 </Project>

@@ -13,9 +13,8 @@ public class File : IFile
 		return words;
 	}
 
-	public void WriteText(string[] text, string path)
+	public void WriteText(Dictionary<string, int> dictionary, string path)
 	{
-		Dictionary<string, int> dictionary = DictionaryFormation(text);
 		using (StreamWriter writer = new(path, false)) {
 			foreach (KeyValuePair<string, int> pair in dictionary.OrderByDescending(pair => pair.Value))
 			{
@@ -26,19 +25,6 @@ public class File : IFile
 				}
 			}
 		}
-	}
-
-	private static Dictionary<string, int> DictionaryFormation(string[] words)
-	{
-		Dictionary<string, int> dictionary = new();
-		foreach (string word in words) {
-			if (!dictionary.ContainsKey(word)) {
-				dictionary.Add(word, 1);
-			} else {
-				dictionary[word]++;
-			}
-		}
-		return dictionary;
 	}
 
 	private static bool DictionaryValidation(KeyValuePair<string, int> pair)

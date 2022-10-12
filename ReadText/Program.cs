@@ -1,5 +1,8 @@
 ﻿// Были сделаны ограничения для уменьшения списска слов.
+
+using System.Reflection;
 using ReadText.WorkFile;
+using ReadTextLibrary;
 using File = ReadText.WorkFile.File;
 
 const string PATH_SOURCE_FILE = @"Text.txt";
@@ -7,7 +10,16 @@ const string PATH_NEW_FILE = @"NewFile.txt";
 
 IFile file = new File();
 string[] readText = file.ReadText(PATH_SOURCE_FILE);
-file.WriteText(readText, PATH_NEW_FILE);
+Convertation convertation = new();
+
+MethodInfo? print = typeof(Convertation).GetMethod("DictionaryConvert",
+                                                   BindingFlags.Instance |
+                                                   BindingFlags.Public |
+                                                   BindingFlags.NonPublic);
+
+if (print?.Invoke(convertation, new object?[] {readText}) is Dictionary<string, int> dictionary) {
+ file.WriteText(dictionary, PATH_NEW_FILE);
+}
 
 /*
  1------------------
